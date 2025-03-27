@@ -25,9 +25,10 @@
 <body class="bg-gray-100 text-gray-900">
     
     <!-- Хедер -->
+    <!--
     <header class="bg-white shadow-md p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Логотип</h1>
+            <h1 class="text-2xl font-bold">ЕхатьОтдыхать</h1>
             <nav>
                 <ul class="flex space-x-4">
                     <li><a href="#" class="text-blue-500 hover:underline">Главная</a></li>
@@ -37,73 +38,209 @@
             </nav>
         </div>
     </header>
+    -->
 
-
-    <!-- Приветственный экран -->
-    <section class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white "
+    <!-- Экран - Приветственный -->
+    <section class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-8"
          style="background-image: url('images/bg_img1.png');">
     
         <!-- Контейнер с текстом -->
-        <div>
-            <h1 class="text-5xl text-[#252429] font-semibold">Идеальное путешествие</h1>
-            <p class="text-xl text-[#252429] font-normal mt-4">Подберем идеальное тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
+        <div class="mt-16">
+            <h1 class="text-5xl text-[#0E3246] font-semibold">Идеальное путешествие</h1>
+            <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальное тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
             <a href="#" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Подобрать</a>
         </div>
 
-        
-
         <!-- Дополнительные изображения -->
-        <img src="images/img_art_airplane.png" class="absolute bottom-[60%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 1">
-        <img src="images/img_art_palm.png" class="absolute bottom-[-5%] right-[50%] md:bottom-[-40%] md:right-[80%] lg:bottom-[-10%] lg:right-[80%] transform -translate-x-1/2 -translate-y-1 w-54" alt="Изображение 2">
+        <img src="images/img_art_airplane.png" class="absolute bottom-[60%] left-[30%] md:bottom-[52%] md:left-[22%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 1">
+        <img src="images/img_art_palm.png" class="absolute z-10 bottom-[-5%] right-[50%] md:bottom-[-10%] md:right-[80%] lg:bottom-[-10%] lg:right-[80%] transform -translate-x-1/2 -translate-y-1 w-54" alt="Изображение 2">
         <img src="images/img_art_camera.png" class="absolute top-[80%] left-[99%] md:top-[60%] md:left-[95%] transform -translate-x-1/2 -translate-y-1/2 w-60" alt="Изображение 3">
     </section>
     
-    <!-- Польза -->
-    <section class="flex flex-col items-center text-center px-4 py-16">
+    
+
+    <!-- Экран - Это наша работа -->
+    <section class="relative flex flex-col bg-[#F7FFFC] items-center text-center px-8 py-16">
         <!-- Заголовок -->
-        <h2 class="text-4xl font-semibold max-w-[800px] w-full text-left">
+        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mt-16 mb-8 text-center">
             Берем на себя ваши заботы
         </h2>
-    
+        
         <!-- Описание -->
-        <p class="text-lg max-w-[800px] w-full mt-4 text-left">
-            Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос. <br><br>
-            Мы ежедневно подбираем туры и знаем, где сейчас 
-            <span class="font-semibold italic">лучшие условия, удобные перелеты и проверенные отели</span>. 
-            Вы просто говорите, что важно, — мы находим оптимальный вариант. <br><br>
-            Все онлайн, и мы всегда на связи в удобном для вас формате.
-        </p>
+        <div class="text-lg max-w-[640px] w-full">
+            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 text-left">
+                Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос.</p>
+            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 text-left">
+                Мы ежедневно подбираем туры и знаем, где сейчас 
+                <span class="font-semibold">лучшие условия, удобные перелеты и проверенные отели</span>. 
+                Вы просто говорите, что важно, — мы находим оптимальный вариант.</p>
+            <p class="text-xl text-[#0E3246] w-full  font-normal mt-4 text-left">
+                Все онлайн, и мы всегда на связи в удобном для вас формате.</p>
+        </div>
+
+        <!-- Кнопка -->
+        <a href="#" class="mt-16 mb-10 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Начать путешествие</a>
+
+        <!-- Дополнительные изображения -->
+        <img src="images/img_art_balloon.png" class="absolute z-10 bottom-[-30%] right-[-20%] md:top-[55%] md:right-[-18%] lg:right-[-18%] transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-60" alt="Изображение 4">
     </section>
 
 
 
-
-    <!-- Герой-блок -->
-    <section class="container mx-auto text-center py-16">
-        <h2 class="text-4xl font-bold">Добро пожаловать!</h2>
-        <p class="mt-4 text-lg text-gray-600">Ваше описание здесь</p>
-        <a href="#" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Подробнее</a>
+    <!-- Экран - Как это работает -->
+    <section class="relative flex flex-col bg-white items-center text-center px-8 py-32">
+        <!-- Заголовок -->
+        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-16 text-center">
+            Рецепт идеального путешествия
+        </h2>
+        
+        <div class="grid z-10 grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Карточка 1 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+              <h3 class="text-xl text-left font-semibold">1</h3>
+              <p class="text-lg text-gray-600 mt-2">
+                <span class="font-semibold">
+                    Оплачиваете услугу
+                </span>
+                    и оставляете контактные данные</p>
+            </div>
+        
+            <!-- Карточка 2 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">2</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Связываемся с вами в течение 12 часов
+                  </span>
+                    и обсуждаем детали в удобном формате.
+                </p>
+            </div>
+        
+            <!-- Карточка 3 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">3</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Подбираем лучший вариант:
+                  </span>
+                    анализируем предложения, уточняем нюансы, сравниваем варианты.
+                </p>
+            </div>
+        
+            <!-- Карточка 4 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">4</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Отправляем вам готовые решения
+                  </span>
+                  – остается только выбрать.
+                </p>
+            </div>
+        
+            <!-- Карточка 5 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">5</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Оформляем бронирования:
+                  </span>
+                    билеты, отели, трансфер, страховку.
+                </p>
+            </div>
+        
+            <!-- Карточка 6 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">6</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Вы получаете единую ссылку для оплаты
+                  </span>
+                    и все документы в одном месте.
+                </p>
+            </div>
+        
+            <!-- Карточка 7 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">7</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Отправляетесь в путешествие
+                  </span>
+                    в выбранную дату.
+                </p>
+            </div>
+        
+            <!-- Карточка 8 -->
+            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+                <h3 class="text-xl text-left font-semibold">8</h3>
+                <p class="text-lg text-gray-600 mt-2">
+                  <span class="font-semibold">
+                    Мы остаемся на связи до конца поездки,
+                  </span>
+                    чтобы помочь в любой ситуации.
+                </p>
+            </div>
+          </div>
+        
+        <!-- Дополнительные изображения -->
+        <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[55%] md:right-[-18%] lg:left-[10%] transform -translate-x-1/2 -translate-y-1/2 w-108" alt="Изображение 4">
     </section>
 
-    <!-- Блок преимуществ -->
-    <section class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-16">
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h3 class="text-xl font-semibold">Преимущество 1</h3>
-            <p class="text-gray-600">Краткое описание</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h3 class="text-xl font-semibold">Преимущество 2</h3>
-            <p class="text-gray-600">Краткое описание</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <h3 class="text-xl font-semibold">Преимущество 3</h3>
-            <p class="text-gray-600">Краткое описание</p>
-        </div>
-    </section>
     
+
+    <!-- Экран - Оплатить подбор -->
+    <section class="relative flex flex-col bg-[#FCF4E0] items-center text-center px-8 py-32">
+
+        <!-- Заголовок -->
+        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
+            Начните свое путешествие
+        </h2>
+        
+        <!-- Описание -->
+        <div class="text-lg w-full">
+            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-16 text-center">Оставьте свои данные и оплатите услугу, мы свяжемся с вами.</p>
+        </div>
+
+        <!-- Форма -->
+        <div class="max-w-[800px] min-w-[640px] mx-auto"> <!-- bg-white p-8 rounded-xl shadow-lg -->
+          
+          <form action="#" method="POST">
+            <!-- Имя -->
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваше имя</label>
+              <input type="text" id="name" name="name" required
+                     class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+      
+            <!-- Сообщение -->
+            <div class="mb-4">
+              <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Как с вами связаться</label>
+              <textarea id="message" name="message" rows="4" required
+                        class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+      
+            <!-- Кнопка отправки -->
+            <div class="flex justify-center">
+              <button type="submit" class="px-6 py-3 bg-[#FF6A6E] shadow-sm text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                Оплатить услугу
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Дополнительные изображения -->
+        <img src="images/img_art_bus.png" class="absolute left-[50%] top-[3%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
+      </section>
+
+
+
+
     <!-- Футер -->
     <footer class="bg-gray-800 text-white text-center p-4">
-        <p>&copy; 2024 Все права защищены</p>
+        <p class="text-left">Совместный проект турагенств Омсктур и ЕхатьОтдыхать </p>
+        <p class="text-left">По вопросам: araytovich@gmail.com</p>
+        <p class="text-left">&copy; 2025 All rights reserved</p>
     </footer>
     
 </body>
