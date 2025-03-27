@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг на Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        html, body {
+            max-width: 100vw;  /* Ограничивает ширину до размеров экрана */
+            overflow-x: hidden; /* Полностью убирает горизонтальный скролл */
+        }
+    
+        /* Дополнительная проверка для мобильных устройств */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Хедер -->
+    <header class="bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Логотип</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-blue-500 hover:underline">Главная</a></li>
+                    <li><a href="#" class="text-blue-500 hover:underline">О нас</a></li>
+                    <li><a href="#" class="text-blue-500 hover:underline">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Приветственный экран -->
+    <section class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white "
+         style="background-image: url('images/bg_img1.png');">
+    
+        <!-- Контейнер с текстом -->
+        <div>
+            <h1 class="text-5xl text-[#252429] font-semibold">Идеальное путешествие</h1>
+            <p class="text-xl text-[#252429] font-normal mt-4">Подберем идеальное тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
+            <a href="#" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Подобрать</a>
+        </div>
+
+        
+
+        <!-- Дополнительные изображения -->
+        <img src="images/img_art_airplane.png" class="absolute bottom-[60%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 1">
+        <img src="images/img_art_palm.png" class="absolute bottom-[-5%] right-[50%] md:bottom-[-40%] md:right-[80%] lg:bottom-[-10%] lg:right-[80%] transform -translate-x-1/2 -translate-y-1 w-54" alt="Изображение 2">
+        <img src="images/img_art_camera.png" class="absolute top-[80%] left-[99%] md:top-[60%] md:left-[95%] transform -translate-x-1/2 -translate-y-1/2 w-60" alt="Изображение 3">
+    </section>
+    
+    <!-- Польза -->
+    <section class="flex flex-col items-center text-center px-4 py-16">
+        <!-- Заголовок -->
+        <h2 class="text-4xl font-semibold max-w-[800px] w-full text-left">
+            Берем на себя ваши заботы
+        </h2>
+    
+        <!-- Описание -->
+        <p class="text-lg max-w-[800px] w-full mt-4 text-left">
+            Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос. <br><br>
+            Мы ежедневно подбираем туры и знаем, где сейчас 
+            <span class="font-semibold italic">лучшие условия, удобные перелеты и проверенные отели</span>. 
+            Вы просто говорите, что важно, — мы находим оптимальный вариант. <br><br>
+            Все онлайн, и мы всегда на связи в удобном для вас формате.
+        </p>
+    </section>
+
+
+
+
+    <!-- Герой-блок -->
+    <section class="container mx-auto text-center py-16">
+        <h2 class="text-4xl font-bold">Добро пожаловать!</h2>
+        <p class="mt-4 text-lg text-gray-600">Ваше описание здесь</p>
+        <a href="#" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600">Подробнее</a>
+    </section>
+
+    <!-- Блок преимуществ -->
+    <section class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-16">
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-xl font-semibold">Преимущество 1</h3>
+            <p class="text-gray-600">Краткое описание</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-xl font-semibold">Преимущество 2</h3>
+            <p class="text-gray-600">Краткое описание</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <h3 class="text-xl font-semibold">Преимущество 3</h3>
+            <p class="text-gray-600">Краткое описание</p>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2024 Все права защищены</p>
+    </footer>
+    
+</body>
+</html>
