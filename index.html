@@ -226,8 +226,82 @@
         <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-8 text-center">Оставьте свои данные и оплатите услугу,
           мы свяжемся с вами.</p>
       </div>
-    
+      
+
       <!-- Форма -->
+      <div class="max-w-[540px] z-10 mx-auto w-full">
+        <form id="contactForm">
+          <!-- Имя -->
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваше имя</label>
+            <input type="text" id="name" name="name" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+      
+          <!-- Контакт (Телефон или email) -->
+          <div class="mb-4">
+            <label for="contact" class="block text-sm font-medium text-gray-700 text-left ml-4">Телефон или email</label>
+            <input type="text" id="contact" name="contact" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+      
+          <!-- Сообщение -->
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваши пожелания</label>
+            <textarea id="message" name="message" rows="3" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </div>
+      
+          <!-- Кнопка отправки -->
+          <div class="flex justify-center">
+            <button type="submit"
+              class="px-6 py-3 bg-[#FF6A6E] shadow-sm text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              Оплатить услугу
+            </button>
+          </div>
+        </form>
+      
+        <!-- Скрипт для отправки данных -->
+        <script>
+          document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();  // Отменяем стандартное поведение формы
+
+            // Собираем данные из формы
+            var formData = {
+              name: document.getElementById("name").value,
+              contact: document.getElementById("contact").value,
+              message: document.getElementById("message").value
+            };
+
+            // Отправка данных в Google Apps Script
+            fetch("https://script.google.com/macros/s/AKfycbxaEgkL3owGS6-h2LTq7NYHv9jR9x_cvL_0ORpUasZ3B8H8rOsseQpUuI9PU0PbHVB9lA/exec", {
+              method: "POST",
+              body: JSON.stringify(formData),
+              headers: { "Content-Type": "application/json" }
+            })
+              .then(response => response.text())
+              .then(data => {
+                if (data === "OK") {
+                  alert("Заявка успешно отправлена!");
+                  // Очистка формы
+                  document.getElementById("contactForm").reset();
+                } else {
+                  alert("Ошибка при отправке. Попробуйте снова.");
+                }
+              })
+              .catch(error => {
+                console.error("Ошибка:", error);
+                alert("Не удалось отправить заявку. Проверьте подключение.");
+              });
+          });
+        </script>
+      </div>
+
+
+
+
+
+      <!-- Форма старая -->
       <div class="max-w-[540px] z-10 mx-auto w-full"> <!-- bg-white p-8 rounded-xl shadow-lg -->
     
         <form  id="contactForm">
