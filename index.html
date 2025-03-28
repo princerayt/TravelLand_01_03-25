@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="overflow-x-hidden">
+<html lang="ru" class="overflow-x-hidden scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,6 @@
         }
     </style>
 </head>
-
 
 <body class="bg-gray-100 text-gray-900">
     <!-- Yandex.Metrika counter -->
@@ -46,7 +45,7 @@
     <!-- /Yandex.Metrika counter -->
 
 
-    
+
     <!-- Хедер -->
     <!--
     <header class="bg-white shadow-md p-4">
@@ -63,7 +62,9 @@
     </header>
     -->
 
-    <!-- Экран - Приветственный -->
+
+
+    <!-- Экран - Первый экран -->
     <section class="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white px-8"
          style="background-image: url('images/bg_img1.png');">
     
@@ -71,7 +72,7 @@
         <div class="mt-16">
             <h1 class="text-5xl text-[#0E3246] font-semibold">Идеальное путешествие</h1>
             <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальное тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
-            <a href="#" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Подобрать</a>
+            <a href="#contact-form" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Подобрать</a>
         </div>
 
         <!-- Дополнительные изображения -->
@@ -102,22 +103,22 @@
         </div>
 
         <!-- Кнопка -->
-        <a href="#" class="mt-16 mb-10 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Начать путешествие</a>
+        <a href="#contact-form" class="mt-16 mb-10 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Начать путешествие</a>
 
         <!-- Дополнительные изображения -->
-        <img src="images/img_art_balloon.png" class="absolute z-10 bottom-[-30%] right-[-20%] md:top-[55%] md:right-[-18%] lg:right-[-18%] transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-60" alt="Изображение 4">
+        <img src="images/img_art_balloon.png" class="absolute z-10 bottom-[-30%] md:top-[55%] right-[-20%] md:right-[-18%] lg:right-[-15%] transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-60" alt="Изображение 4">
     </section>
 
 
 
     <!-- Экран - Как это работает -->
-    <section class="relative flex flex-col bg-white items-center text-center px-8 py-32">
+    <section class="relative flex flex-col  bg-white items-center text-center px-8 py-32">
         <!-- Заголовок -->
         <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-16 text-center">
             Рецепт идеального путешествия
         </h2>
         
-        <div class="grid z-10 grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="grid z-10 grid-cols-1 max-w-[1120px] md:grid-cols-4 gap-6">
             <!-- Карточка 1 -->
             <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
               <h3 class="text-xl text-left font-semibold">1</h3>
@@ -207,63 +208,108 @@
           </div>
         
         <!-- Дополнительные изображения -->
-        <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[55%] md:right-[-18%] lg:left-[10%] transform -translate-x-1/2 -translate-y-1/2 w-108" alt="Изображение 4">
+        <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[35%] md:left-[5%] transform -translate-x-1/2 -translate-y-1/2 w-108" alt="Изображение 4">
     </section>
 
     
 
     <!-- Экран - Оплатить подбор -->
     <section class="relative flex flex-col bg-[#FCF4E0] items-center text-center px-8 py-32">
-
-        <!-- Заголовок -->
-        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
-            Начните свое путешествие
-        </h2>
-        
-        <!-- Описание -->
-        <div class="text-lg w-full">
-            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-16 text-center">Оставьте свои данные и оплатите услугу, мы свяжемся с вами.</p>
-        </div>
-
-        <!-- Форма -->
-        <div class="max-w-[800px] min-w-[640px] mx-auto"> <!-- bg-white p-8 rounded-xl shadow-lg -->
-          
-          <form action="#" method="POST">
-            <!-- Имя -->
-            <div class="mb-4">
-              <label for="name" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваше имя</label>
-              <input type="text" id="name" name="name" required
-                     class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            </div>
+    
+      <!-- Заголовок -->
+      <h2 id="contact-form" class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
+        Начните свое путешествие
+      </h2>
+    
+      <!-- Описание -->
+      <div class="text-lg w-full">
+        <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-8 text-center">Оставьте свои данные и оплатите услугу,
+          мы свяжемся с вами.</p>
+      </div>
+    
+      <!-- Форма -->
+      <div class="max-w-[540px] z-10 mx-auto w-full"> <!-- bg-white p-8 rounded-xl shadow-lg -->
+    
+        <form  id="contactForm">
+          <!-- Имя -->
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваше имя</label>
+            <input type="text" id="name" name="name" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+    
+          <!-- Имя -->
+          <div class="mb-4">
+            <label for="contact" class="block text-sm font-medium text-gray-700 text-left ml-4">Телефон или email</label>
+            <input type="text" id="contact" name="contact" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+    
+          <!-- Сообщение -->
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваши пожелания</label>
+            <textarea id="message" name="message" rows="3" required
+              class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </div>
+    
+          <!-- Кнопка отправки -->
+          <div class="flex justify-center">
+            <button type="submit"
+              class="px-6 py-3 bg-[#FF6A6E] shadow-sm text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              Оплатить услугу
+            </button>
+          </div>
+        </form>
+      </div>
+    
+      <!-- Дополнительные изображения -->
+      <img src="images/img_art_bus.png"
+        class="absolute left-[50%] top-[3%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
+      <img src="images/img_art_palmdouble.png"
+        class="absolute left-[10%] bottom-[-32%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
+      <img src="images/img_art_camera2.png"
+        class="absolute right-[-50%] md:right-[-5%] bottom-[-15%] md:bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2 w-56 md:w-64"
+        alt="Изображение 6">
+    </section>
       
-            <!-- Сообщение -->
-            <div class="mb-4">
-              <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Как с вами связаться</label>
-              <textarea id="message" name="message" rows="4" required
-                        class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-            </div>
-      
-            <!-- Кнопка отправки -->
-            <div class="flex justify-center">
-              <button type="submit" class="px-6 py-3 bg-[#FF6A6E] shadow-sm text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                Оплатить услугу
-              </button>
-            </div>
-          </form>
-        </div>
 
-        <!-- Дополнительные изображения -->
-        <img src="images/img_art_bus.png" class="absolute left-[50%] top-[3%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
-      </section>
 
+    <!-- Скрипт для отправки данных -->
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var formData = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("contact").value,
+          message: document.getElementById("message").value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbxaEgkL3owGS6-h2LTq7NYHv9jR9x_cvL_0ORpUasZ3B8H8rOsseQpUuI9PU0PbHVB9lA/exec", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: { "Content-Type": "application/json" }
+        })
+          .then(response => response.text())
+          .then(data => {
+            if (data === "OK") {
+              alert("Заявка отправлена!");
+            } else {
+              alert("Ошибка отправки, попробуйте снова.");
+            }
+          });
+      });
+    </script>
 
 
 
     <!-- Футер -->
-    <footer class="bg-gray-800 text-white text-center p-4">
-        <p class="text-left">Совместный проект турагенств Омсктур и ЕхатьОтдыхать </p>
-        <p class="text-left">По вопросам: araytovich@gmail.com</p>
-        <p class="text-left">&copy; 2025 All rights reserved</p>
+    <footer class="bg-gray-800  text-white text-center p-4">
+      <div class="mx-auto w-full px-4 md:px-32 mt-12 mb-4">
+        <p class="text-left">Совместный проект<br>Турагенства Омсктур и ЕхатьОтдыхать </p>
+        <p class="text-left">По вопросам: fifthstairs@gmail.com</p>
+        <p class="text-left">&copy; 2025 All rights reserved </p>
+      </div>
     </footer>
     
 </body>
