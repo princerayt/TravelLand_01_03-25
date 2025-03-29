@@ -278,21 +278,13 @@
               body: formData,
               mode: "no-cors"  // ВАЖНО: Отключаем CORS, чтобы проверить, доходит ли запрос до сервера
             })
-              .then(response => response.text())
-              .then(data => {
-                if (data === "OK") {
-                  alert("Заявка успешно отправлена!");
-                  // Очистка формы
-                  document.getElementById("contactForm").reset();
-                } else {
-                  alert("Ошибка при отправке. Попробуйте снова.");
-                }
+            .then(() => {
+                alert("Заявка отправлена! (проверь таблицу)");
               })
               .catch(error => {
-                console.error("Ошибка:", error);
-                alert("Не удалось отправить заявку. Проверьте подключение.");
+                alert("Ошибка отправки, попробуйте снова.");
+                console.error(error);
               });
-          });
         </script>
       </div>
     
@@ -318,6 +310,7 @@
         <p class="text-left">Совместный проект<br>Турагенства Омсктур и ЕхатьОтдыхать </p>
         <p class="text-left">По вопросам: fifthstairs@gmail.com</p>
         <p class="text-left">&copy; 2025 All rights reserved </p>
+        <p class="text-left">&copy; Версия 01 </p>
       </div>
     </footer>
     
