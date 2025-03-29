@@ -264,27 +264,28 @@
         <!-- Скрипт для отправки данных -->
         <script>
           document.getElementById("contactForm").addEventListener("submit", function (event) {
-            event.preventDefault();  // Отменяем стандартное поведение формы
+              event.preventDefault();  // Отменяем стандартное поведение формы
 
-            // Собираем данные из формы
-            var formData = new FormData();
-            formData.append("name", document.getElementById("name").value);
-            formData.append("contact", document.getElementById("contact").value);
-            formData.append("message", document.getElementById("message").value);                                                                                                   
+              // Собираем данные из формы
+              var formData = new FormData();
+              formData.append("name", document.getElementById("name").value);
+              formData.append("contact", document.getElementById("contact").value);
+              formData.append("message", document.getElementById("message").value);
 
-            // Отправка данных в Google Apps Script
-            fetch("https://script.google.com/macros/s/AKfycbx7P3Ujv-S63Cvn0S9X61OEXPRUdi9VccfCOMTmtkbqleMIp_SHZgzMY3Xyu-GpWUstpg/exec", {
-              method: "POST",
-              body: formData,
-              mode: "no-cors"  // ВАЖНО: Отключаем CORS, чтобы проверить, доходит ли запрос до сервера
-            })
-            .then(() => {
-                alert("Заявка отправлена! (проверь таблицу)");
+              // Отправка данных в Google Apps Script
+              fetch("https://script.google.com/macros/s/AKfycbx7P3Ujv-S63Cvn0S9X61OEXPRUdi9VccfCOMTmtkbqleMIp_SHZgzMY3Xyu-GpWUstpg/exec", {
+                method: "POST",
+                body: formData,
+                mode: "no-cors"  // ВАЖНО: Отключаем CORS, чтобы проверить, доходит ли запрос до сервера
               })
-              .catch(error => {
-                alert("Ошибка отправки, попробуйте снова.");
-                console.error(error);
-              });
+                .then(() => {
+                  alert("Заявка отправлена! (проверь таблицу)");
+                })
+                .catch(error => {
+                  alert("Ошибка отправки, попробуйте снова.");
+                  console.error(error);
+                });
+            });
         </script>
       </div>
     
@@ -310,7 +311,7 @@
         <p class="text-left">Совместный проект<br>Турагенства Омсктур и ЕхатьОтдыхать </p>
         <p class="text-left">По вопросам: fifthstairs@gmail.com</p>
         <p class="text-left">&copy; 2025 All rights reserved </p>
-        <p class="text-left">&copy; Версия 01 </p>
+        <p class="text-left">&copy; Версия 02 </p>
       </div>
     </footer>
     
