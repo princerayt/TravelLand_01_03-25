@@ -275,11 +275,11 @@
               };
         
               // Отправка данных в Google Apps Script
-              fetch("https://script.google.com/macros/s/AKfycbyuuV78vnuGy-3gkIPQo-a0o7qRIlCvrxgDLpDMpC1zs2V2qkaNXg4GTnk348DQJYl58w/exec", {
+              fetch("https://script.google.com/macros/s/AKfycbyXOKS7Ifx7CMidgDO5__oOyrBo9aAc1xBdHVw_4BcENX_L8DL2pWhOous1j9kJXhCROw/exec", {
                 method: "POST",
                 body: JSON.stringify(formData),  // Отправляем данные как JSON
                 headers: { "Content-Type": "application/json" }, // Устанавливаем заголовок
-                mode: "no-cors"  // Для тестирования, если нужно
+                // mode: "no-cors"  // Для тестирования, если нужно
               })
               .then(() => {
                 alert("Заявка отправлена! (проверь таблицу)");
@@ -310,7 +310,7 @@
         <p class="text-left">Совместный проект<br>Турагенства Омсктур и ЕхатьОтдыхать </p>
         <p class="text-left">По вопросам: fifthstairs@gmail.com</p>
         <p class="text-left">&copy; 2025 All rights reserved </p>
-        <p class="text-left">&copy; 5 no-cors </p>
+        <p class="text-left">&copy; Заявки 6 </p>
       </div>
     </footer>
     
