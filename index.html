@@ -267,17 +267,19 @@
               event.preventDefault();  // Отменяем стандартное поведение формы
         
               alert("Форма отправляется..."); // Проверка, вызывается ли обработчик
-        
+
               // Собираем данные из формы
-              var formData = new FormData();
-              formData.append("name", document.getElementById("name").value);
-              formData.append("contact", document.getElementById("contact").value); // Было "contact", теперь "email"
-              formData.append("message", document.getElementById("message").value);
+              var formData = {
+                name: document.getElementById("name").value,
+                contact: document.getElementById("contact").value,
+                message: document.getElementById("message").value
+              };
         
               // Отправка данных в Google Apps Script
-              fetch("https://script.google.com/macros/s/AKfycbxlSc7TqyVtMIRieFMgxVVHDAt8ek5lVHEH9UUjN24GIxniH1HMxKOWFvmhuuSlRtwlzA/exec", {
+              fetch("https://script.google.com/macros/s/AKfycbzGtZOxLumdHrg_yC2ymjTe0R4oO48bTbmxI4CDCshHSy598vinPrNaYqjoSQvGiAzCVg/exec", {
                 method: "POST",
-                body: formData,
+                body: JSON.stringify(formData),  // Отправляем данные как JSON
+                headers: { "Content-Type": "application/json" }, // Устанавливаем заголовок
                 mode: "no-cors"  // Отключаем CORS (временно)
               })
               .then(() => {
@@ -313,7 +315,7 @@
         <p class="text-left">Совместный проект<br>Турагенства Омсктур и ЕхатьОтдыхать </p>
         <p class="text-left">По вопросам: fifthstairs@gmail.com</p>
         <p class="text-left">&copy; 2025 All rights reserved </p>
-        <p class="text-left">&copy; Версия 04 </p>
+        <p class="text-left">&copy; Заявки 04-2 json </p>
       </div>
     </footer>
     
