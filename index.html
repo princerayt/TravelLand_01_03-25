@@ -16,7 +16,7 @@
   <meta name="msapplication-TileImage" content="/images/favicon-144x144.png">
 
   <!-- Цвет темы для мобильных устройств -->
-  <meta name="theme-color" content="#FF6A6E">
+  <meta name="theme-color" content="#FAF2EB">
 
   <style>
     html,
@@ -42,7 +42,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       new Swiper(".swiper", {
-        slidesPerView: 1.2,
+        slidesPerView: 1.3,
         spaceBetween: 16,
         centeredSlides: true,
         loop: true,
@@ -57,16 +57,54 @@
       });
     });
   </script>
+
   <style>
     .swiper-slide {
       width: auto;
-      height: 500px;
+      height: auto; /*500px*/
       display: flex;
       align-items: center;
       justify-content: center;
       background: #f3f4f6;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    /* Убираем фон и тень под картинками */
+    .swiper-slide {
+      background: none;
+      box-shadow: none;
+    }
+  
+    /* Переносим пагинацию вниз */
+    .swiper-pagination {
+      position: static;
+      margin-top: 12px;
+    }
+  
+    /* Кастомизация стрелок */
+    .swiper-button-next {
+      width: 40px;
+      /* Размер стрелки */
+      height: 40px;
+      margin-left: 32px;
+      color: #007AFF;
+      /* Цвет стрелок */
+    }
+
+    .swiper-button-prev {
+      width: 40px;
+      /* Размер стрелки */
+      height: 40px;
+      margin-right: 64px;
+      color: #007AFF;
+      /* Цвет стрелок */
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 24px;
+      /* Размер иконки */
     }
   </style>
 </head>
@@ -121,7 +159,7 @@
         <!-- Контейнер с текстом -->
         <div class="mt-16">
             <h1 class="text-5xl text-[#0E3246] font-semibold">Идеальное путешествие</h1>
-            <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальный тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
+            <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальный тур за&nbsp;5&nbsp;000&nbsp;₽&nbsp;– без долгих поисков и сложного выбора</p>
             <a href="#contact-form" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Подобрать тур</a>
         </div>
 
@@ -145,19 +183,19 @@
           <!-- Карточка 1 -->
           <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
             <h3 class="text-xl text-left font-semibold">Дорожите своим временем</h3>
-            <p class="text-lg text-gray-600 mt-2">Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос.</p>
+            <p class="text-lg text-gray-600 mt-2">Вместо 30 часов поиска и&nbsp;сомнений — готовый тур под ваш запрос.</p>
           </div>
       
           <!-- Карточка 2 -->
           <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-            <h3 class="text-xl text-left font-semibold">Не знаете всех нюансов и актуальных новостей туризма</h3>
-            <p class="text-lg text-gray-600 mt-2">Мы ежедневно подбираем туры и знаем, где сейчас хорошая погода, удобные перелеты и проверенные отели. Вы просто говорите, что важно, — мы находим оптимальный вариант.</p>
+            <h3 class="text-xl text-left font-semibold">Не знаете всех нюансов и&nbsp;актуальных новостей туризма</h3>
+            <p class="text-lg text-gray-600 mt-2">Мы ежедневно подбираем туры и&nbsp;знаем, где&nbsp;сейчас хорошая погода, удобные перелеты и&nbsp;проверенные отели. Вы просто говорите, что&nbsp;важно&nbsp;— мы&nbsp;находим оптимальный вариант.</p>
           </div>
 
           <!-- Карточка 3 -->
           <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
             <h3 class="text-xl text-left font-semibold">Цените комфорт и скорость</h3>
-            <p class="text-lg text-gray-600 mt-2">Все онлайн, и мы всегда на связи в удобном для вас формате.</p>
+            <p class="text-lg text-gray-600 mt-2">Все онлайн, и&nbsp;мы&nbsp;всегда на&nbsp;связи в&nbsp;удобном для вас формате.</p>
           </div>
         </div>
 
@@ -186,7 +224,7 @@
                 <span class="font-semibold">
                   Оплачиваете услугу
                 </span>
-                и оставляете контактные данные
+                и&nbsp;оставляете контактные данные
               </p>
             </div>
           </div>
@@ -197,9 +235,9 @@
               <h3 class="w-6 text-xl font-semibold">2</h3>
               <p class="w-full text-lg text-gray-600">
                 <span class="font-semibold">
-                  Связываемся с вами в течение 12 часов
+                  Связываемся с&nbsp;вами в&nbsp;течение 12&nbsp;часов
                 </span>
-                и обсуждаем детали в удобном формате.
+                и&nbsp;обсуждаем детали в&nbsp;удобном формате.
               </p>
             </div>
           </div>
@@ -249,9 +287,9 @@
               <h3 class="w-6 text-xl font-semibold">6</h3>
               <p class="w-full text-lg text-gray-600">
                 <span class="font-semibold">
-                  Вы получаете единую ссылку для оплаты
+                  Вы получаете единую ссылку для&nbsp;оплаты
                 </span>
-                и все документы в одном месте.
+                и&nbsp;все документы в&nbsp;одном месте.
               </p>
             </div>
           </div>
@@ -262,9 +300,9 @@
               <h3 class="w-6 text-xl font-semibold">7</h3>
               <p class="w-full text-lg text-gray-600">
                 <span class="font-semibold">
-                  Отправляетесь в путешествие
+                  Отправляетесь в&nbsp;путешествие
                 </span>
-                в выбранную дату.
+                в&nbsp;выбранную дату.
               </p>
             </div>
           </div>
@@ -275,9 +313,9 @@
               <h3 class="w-6 text-xl font-semibold">8</h3>
               <p class="w-full text-lg text-gray-600">
                 <span class="font-semibold">
-                  Мы остаемся на связи до конца поездки,
+                  Мы остаемся на&nbsp;связи до&nbsp;конца поездки,
                 </span>
-                чтобы помочь в любой ситуации.
+                чтобы помочь в&nbsp;любой ситуации.
               </p>
             </div>
           </div>
@@ -295,14 +333,14 @@
     <!-- Экран - Онлайн -->
     <section class="relative flex flex-col bg-[#F7FFFC] items-center text-center px-8 py-16">
       <!-- Заголовок -->
-      <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-8 mt-8 md:mt-0 text-center">
+      <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-4 mt-8 md:mt-0 text-center">
         Онлайн подбор
       </h2>
 
       <!-- Описание -->
       <div class="text-lg">
         <p class="text-xl text-[#0E3246] max-w-[430px] font-normal mb-8 text-center">
-          80% наших туристов предпочитают общаться в текстовой форме в мессенжерах
+          80% наших туристов предпочитают общаться в&nbsp;текстовой форме в&nbsp;мессенжерах
         </p>
       </div>
       
@@ -313,8 +351,8 @@
           <div class="swiper-slide"><img src="images/img_app_2.png" alt="Скрин 2" class="h-full w-auto"></div>
           <div class="swiper-slide"><img src="images/img_app_3.png" alt="Скрин 3" class="h-full w-auto"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-button-next"></div> -->
+        <!-- <div class="swiper-button-prev"></div> -->
         <div class="swiper-pagination"></div>
       </div>
 
@@ -327,7 +365,7 @@
     
       <!-- Кнопка -->
       <a href="#contact-form"
-        class="mt-12 mb-16 md:mb-32 inline-block  text-white font-semibold px-6 py-3 rounded-md shadow-md bg-[#FF6A6E] hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать
+        class="mt-8 md:mt-12 mb-16 md:mb-32 inline-block  text-white font-semibold px-6 py-3 rounded-md shadow-md bg-[#FF6A6E] hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать
         путешествие</a>
       
       <!-- Дополнительные изображения -->
@@ -340,14 +378,14 @@
     <section class="relative flex flex-col bg-[#FCF4E0] items-center text-center px-8 py-16">
     
       <!-- Заголовок -->
-      <h2 id="contact-form" class="text-4xl font-semibold max-w-[400px] md:max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
-        Начните свое путешествие
+      <h2 id="contact-form" class="text-4xl font-semibold max-w-[520px] md:max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
+        Начните свое&nbsp;путешествие
       </h2>
     
       <!-- Описание -->
       <div class="text-lg w-full">
-        <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-8 text-center">Оставьте свои данные и оплатите услугу,
-          мы свяжемся с вами.</p>
+        <p class="text-xl text-[#0E3246] w-full font-normal mt-2 mb-8 text-center">Оставьте свои данные и оплатите услугу,
+          мы свяжемся с&nbsp;вами.</p>
       </div>
     
       <!-- Форма -->
@@ -365,7 +403,7 @@
             <label for="contact" class="block text-sm font-medium text-gray-700 text-left ml-4">Телефон или email</label>
             <input type="text" id="contact" name="contact" required
               class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <small class="text-gray-500 italic block w-full text-left ml-4">Удобный для вас способ: whatsapp, telegram, email, звонок по телефону</small>
+            <small class="text-gray-500 italic block w-full text-left ml-4">Как вам удобно: whatsapp, telegram, email, звонок по&nbsp;телефону</small>
           </div>
     
           <!-- Сообщение -->
@@ -373,12 +411,12 @@
             <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваши пожелания</label>
             <textarea id="message" name="message" rows="3" required
               class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-            <small class="text-gray-500 italic block w-full text-left ml-4">Кол-во человек, какие нравятся курорты, бюджет и все, что сочтете нужным</small>
+            <small class="text-gray-500 italic block w-full text-left ml-4">Кол-во человек, какие нравятся курорты, бюджет и&nbsp;все, что&nbsp;сочтете нужным</small>
           </div>
 
           <!-- Стоимость услуги -->
           <div class="text-lg w-full">
-            <p class="text-md text-[#0E3246] w-full font-normal mt-4 mb-8 ml-4 text-left">
+            <p class="text-md text-[#0E3246] w-full font-normal mt-4 mb-4 md:ml-4 text-center">
               <span class="font-semibold">
                 Стоимость услуги подбора: 5 000 рублей
               </span>
@@ -394,8 +432,8 @@
           </div>
         </form>
         
-        <div class="text-sm text-gray-600 px-8 md:px-28 w-full text-center">
-          Нажимая на кнопку, вы соглашаетесь с <a href="/policy.html" target="_blank" class="text-blue-500 hover:underline">Политикой обработки персональных данных</a>.
+        <div class="text-sm text-gray-600 px-8 md:px-28 w-full text-center mt-2">
+          Нажимая на кнопку, вы соглашаетесь&nbsp;с <a href="/policy.html" target="_blank" class="text-blue-500 hover:underline">Политикой&nbsp;обработки персональных данных</a>.
         </div>
 
         <!-- Скрипт для отправки данных -->
