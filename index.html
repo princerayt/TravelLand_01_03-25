@@ -215,7 +215,7 @@
             Как мы работаем
         </h2>
         
-        <div class="grid z-10 grid-cols-1 max-w-[640px] md:grid-cols-1 gap-6">
+        <div class="grid z-20 grid-cols-1 max-w-[640px] md:grid-cols-1 gap-6">
           <!-- Карточка 1 -->
           <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
             <div class="flex items-start gap-3">
@@ -326,6 +326,7 @@
 
         <!-- Дополнительные изображения -->
         <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[30%] md:left-[28%] transform -translate-x-1/2 -translate-y-1/2 w-72" alt="Изображение 4">
+        <img src="images/img_art_limonad.png" class="absolute z-10 bottom-[-8%] md:bottom-[30%] right-[30%] md:right-[15%] transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-32" alt="Изображение 12">
     </section>
 
     
@@ -367,9 +368,6 @@
       <a href="#contact-form"
         class="mt-8 md:mt-12 mb-16 md:mb-32 inline-block  text-white font-semibold px-6 py-3 rounded-md shadow-md bg-[#FF6A6E] hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать
         путешествие</a>
-      
-      <!-- Дополнительные изображения -->
-      <img src="images/img_art_limonad.png" class="absolute z-10 top-[2%] md:top-[-45%] right-[3%] md:right-[22%] transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-32" alt="Изображение 12">
     </section>
 
 
@@ -443,6 +441,8 @@
 
             /* alert("Форма отправляется..."); // Проверка, вызывается ли обработчик */
 
+            ym(100649529, "reachGoal", "form_submit_click"); // Цель на нажатие кнопки "Отправить"
+
             // Показываем лоадер
             document.getElementById("loaderOverlay").classList.remove("hidden");
 
@@ -465,6 +465,8 @@
                 // Скрываем лоадер с небольшой задержкой перед alert
                 document.getElementById("loaderOverlay").classList.add("hidden");
 
+                ym(100649529, "reachGoal", "form_success"); // Цель на успешную отправку формы
+
                 setTimeout(() => {
                   // Показываем сообщение об успехе
                   alert("Заявка отправлена!");
@@ -476,6 +478,8 @@
               .catch(error => {
                 // Скрываем лоадер перед алертом
                 document.getElementById("loaderOverlay").classList.add("hidden");
+
+                ym(100649529, "reachGoal", "form_error"); // Цель на ошибку отправки формы
 
                 setTimeout(() => {
                   // Показываем сообщение об ошибке
@@ -508,7 +512,23 @@
       </div>
     </footer>
     
-
+    <!-- Скрипт отправки целей для кнопок со скролом href# -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(button => {
+          button.addEventListener("click", function() {
+              ym(100649529, "reachGoal", "scroll_button_click"); // Цель для кнопки скролла
+          });
+      });
+      </script>
+    
+    <!-- Скрипт отпарвки целей для полей формы -->
+    <script>
+      document.querySelectorAll("#contactForm input, #contactForm textarea").forEach(input => {
+          input.addEventListener("focus", function() {
+              ym(100649529, "reachGoal", "form_field_focus"); // Цель при клике на поле ввода
+          });
+      });
+      </script>
 
   <!-- Затемнение экрана и лоадер -->
   <div id="loaderOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
