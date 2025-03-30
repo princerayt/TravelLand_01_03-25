@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru" class="overflow-x-hidden scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Идеальное путешествие</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        html, body {
-            max-width: 100vw;  /* Ограничивает ширину до размеров экрана */
-            overflow-x: hidden; /* Полностью убирает горизонтальный скролл */
-        }
-    
-        /* Дополнительная проверка для мобильных устройств */
-        @media (max-width: 768px) {
-            html, body {
-                overflow-x: hidden;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Идеальное путешествие</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <style>
+    html,
+    body {
+      max-width: 100vw;
+      /* Ограничивает ширину до размеров экрана */
+      overflow-x: hidden;
+      /* Полностью убирает горизонтальный скролл */
+    }
+
+    /* Дополнительная проверка для мобильных устройств */
+    @media (max-width: 768px) {
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper(".swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    });
+  </script>
+  <style>
+    .swiper-slide {
+      width: auto;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
@@ -71,8 +110,8 @@
         <!-- Контейнер с текстом -->
         <div class="mt-16">
             <h1 class="text-5xl text-[#0E3246] font-semibold">Идеальное путешествие</h1>
-            <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальное тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
-            <a href="#contact-form" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Подобрать</a>
+            <p class="text-xl text-[#0E3246] font-normal mt-4">Подберем идеальный тур за 5 000 ₽ – <br> без долгих поисков и сложного выбора</p>
+            <a href="#contact-form" class="mt-6 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Подобрать тур</a>
         </div>
 
         <!-- Дополнительные изображения -->
@@ -86,138 +125,211 @@
     <!-- Экран - Это наша работа -->
     <section class="relative flex flex-col bg-[#F7FFFC] items-center text-center px-8 py-16">
         <!-- Заголовок -->
-        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mt-16 mb-8 text-center">
-            Берем на себя ваши заботы
+        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mt-8 mb-8 text-center">
+            Для кого эта услуга
         </h2>
         
-        <!-- Описание -->
-        <div class="text-lg max-w-[640px] w-full">
-            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 text-left">
-                Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос.</p>
-            <p class="text-xl text-[#0E3246] w-full font-normal mt-4 text-left">
-                Мы ежедневно подбираем туры и знаем, где сейчас 
-                <span class="font-semibold">лучшие условия, удобные перелеты и проверенные отели</span>. 
-                Вы просто говорите, что важно, — мы находим оптимальный вариант.</p>
-            <p class="text-xl text-[#0E3246] w-full  font-normal mt-4 text-left">
-                Все онлайн, и мы всегда на связи в удобном для вас формате.</p>
+        <!-- Блок для карточек -->
+        <div class="grid z-10 grid-cols-1 max-w-[640px] md:grid-cols-1 gap-6">
+          <!-- Карточка 1 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <h3 class="text-xl text-left font-semibold">Дорожите своим временем</h3>
+            <p class="text-lg text-gray-600 mt-2">Вместо 30 часов поиска и сомнений — готовый тур под ваш запрос.</p>
+          </div>
+      
+          <!-- Карточка 2 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <h3 class="text-xl text-left font-semibold">Не знаете всех нюансов и актуальных новостей туризма</h3>
+            <p class="text-lg text-gray-600 mt-2">Мы ежедневно подбираем туры и знаем, где сейчас хорошая погода, удобные перелеты и проверенные отели. Вы просто говорите, что важно, — мы находим оптимальный вариант.</p>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <h3 class="text-xl text-left font-semibold">Цените комфорт и скорость</h3>
+            <p class="text-lg text-gray-600 mt-2">Все онлайн, и мы всегда на связи в удобном для вас формате.</p>
+          </div>
         </div>
 
         <!-- Кнопка -->
-        <a href="#contact-form" class="mt-16 mb-10 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-blue-600">Начать путешествие</a>
+        <a href="#contact-form" class="mt-8 mb-10 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать путешествие</a>
 
         <!-- Дополнительные изображения -->
-        <img src="images/img_art_balloon.png" class="absolute z-10 bottom-[-30%] md:top-[55%] right-[-20%] md:right-[-18%] lg:right-[-15%] transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-60" alt="Изображение 4">
+        <img src="images/img_art_balloon.png" class="absolute z-10 bottom-[-20%] md:top-[50%] right-[25%] md:right-[-15%] lg:right-[-10%] transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-60" alt="Изображение 4">
     </section>
 
 
 
     <!-- Экран - Как это работает -->
-    <section class="relative flex flex-col  bg-white items-center text-center px-8 py-32">
+    <section class="relative flex flex-col  bg-white items-center text-center px-8 py-16">
         <!-- Заголовок -->
-        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-16 text-center">
-            Рецепт идеального путешествия
+        <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-8 mt-16 md:mt-0 text-center">
+            Как мы работаем
         </h2>
         
-        <div class="grid z-10 grid-cols-1 max-w-[1120px] md:grid-cols-4 gap-6">
-            <!-- Карточка 1 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-              <h3 class="text-xl text-left font-semibold">1</h3>
-              <p class="text-lg text-gray-600 mt-2">
+        <div class="grid z-10 grid-cols-1 max-w-[640px] md:grid-cols-1 gap-6">
+          <!-- Карточка 1 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">1</h3>
+              <p class="w-full text-lg text-gray-600">
                 <span class="font-semibold">
-                    Оплачиваете услугу
+                  Оплачиваете услугу
                 </span>
-                    и оставляете контактные данные</p>
-            </div>
-        
-            <!-- Карточка 2 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">2</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Связываемся с вами в течение 12 часов
-                  </span>
-                    и обсуждаем детали в удобном формате.
-                </p>
-            </div>
-        
-            <!-- Карточка 3 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">3</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Подбираем лучший вариант:
-                  </span>
-                    анализируем предложения, уточняем нюансы, сравниваем варианты.
-                </p>
-            </div>
-        
-            <!-- Карточка 4 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">4</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Отправляем вам готовые решения
-                  </span>
-                  – остается только выбрать.
-                </p>
-            </div>
-        
-            <!-- Карточка 5 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">5</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Оформляем бронирования:
-                  </span>
-                    билеты, отели, трансфер, страховку.
-                </p>
-            </div>
-        
-            <!-- Карточка 6 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">6</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Вы получаете единую ссылку для оплаты
-                  </span>
-                    и все документы в одном месте.
-                </p>
-            </div>
-        
-            <!-- Карточка 7 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">7</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Отправляетесь в путешествие
-                  </span>
-                    в выбранную дату.
-                </p>
-            </div>
-        
-            <!-- Карточка 8 -->
-            <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
-                <h3 class="text-xl text-left font-semibold">8</h3>
-                <p class="text-lg text-gray-600 mt-2">
-                  <span class="font-semibold">
-                    Мы остаемся на связи до конца поездки,
-                  </span>
-                    чтобы помочь в любой ситуации.
-                </p>
+                и оставляете контактные данные
+              </p>
             </div>
           </div>
         
+          <!-- Карточка 2 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">2</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Связываемся с вами в течение 12 часов
+                </span>
+                и обсуждаем детали в удобном формате.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 3 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">3</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Подбираем лучший вариант:
+                </span>
+                анализируем предложения, уточняем нюансы, сравниваем варианты.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 4 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">4</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Отправляем вам готовые решения
+                </span>
+                – остается только выбрать.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 5 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">5</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Оформляем бронирования:
+                </span>
+                билеты, отели, трансфер, страховку.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 6 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">6</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Вы получаете единую ссылку для оплаты
+                </span>
+                и все документы в одном месте.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 7 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">7</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Отправляетесь в путешествие
+                </span>
+                в выбранную дату.
+              </p>
+            </div>
+          </div>
+        
+          <!-- Карточка 8 -->
+          <div class="p-6 bg-[#EBF9FF] rounded-md shadow-sm text-left">
+            <div class="flex items-start gap-3">
+              <h3 class="w-6 text-xl font-semibold">8</h3>
+              <p class="w-full text-lg text-gray-600">
+                <span class="font-semibold">
+                  Мы остаемся на связи до конца поездки,
+                </span>
+                чтобы помочь в любой ситуации.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Кнопка -->
+        <a href="#contact-form" class="mt-8 mb-8 inline-block bg-[#FF6A6E] text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать путешествие</a>  
+
         <!-- Дополнительные изображения -->
-        <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[35%] md:left-[5%] transform -translate-x-1/2 -translate-y-1/2 w-108" alt="Изображение 4">
+        <img src="images/img_art_map.png" class="absolute bottom-[-30%] right-[-20%] md:top-[30%] md:left-[5%] transform -translate-x-1/2 -translate-y-1/2 w-96" alt="Изображение 4">
     </section>
 
     
 
+    <!-- Экран - Онлайн -->
+    <section class="relative flex flex-col bg-[#F7FFFC] items-center text-center px-8 py-16">
+      <!-- Заголовок -->
+      <h2 class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-8 mt-8 md:mt-0 text-center">
+        Онлайн подбор
+      </h2>
+
+      <!-- Описание -->
+      <div class="text-lg">
+        <p class="text-xl text-[#0E3246] max-w-[430px] font-normal mb-8 text-center">
+          80% наших туристов предпочитают общаться в текстовой форме в мессенжерах
+        </p>
+      </div>
+      
+      <!-- Слайдер -->
+      <div class="swiper w-full max-w-xs md:hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/img_app_1.png" alt="Скрин 1" class="h-full w-auto"></div>
+          <div class="swiper-slide"><img src="images/img_app_2.png" alt="Скрин 2" class="h-full w-auto"></div>
+          <div class="swiper-slide"><img src="images/img_app_3.png" alt="Скрин 3" class="h-full w-auto"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Скриншоты -->
+      <div class="flex flex-row gap-6 z-10 hidden md:flex">
+        <img src="images/img_app_1.png" class="w-56 object-cover" alt="Изображение 7">
+        <img src="images/img_app_2.png" class="w-56 object-cover" alt="Изображение 7">
+        <img src="images/img_app_3.png" class="w-56 object-cover" alt="Изображение 7">
+      </div>
+    
+      <!-- Кнопка -->
+      <a href="#contact-form"
+        class="mt-12 mb-16 md:mb-32 inline-block  text-white font-semibold px-6 py-3 rounded-md shadow-md bg-[#FF6A6E] hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">Начать
+        путешествие</a>
+      
+      <!-- Дополнительные изображения -->
+      <img src="images/img_art_limonad.png" class="absolute z-10 top-[2%] md:top-[-45%] right-[30%] md:right-[-6%] transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-44" alt="Изображение 12">
+    </section>
+
+
+
     <!-- Экран - Оплатить подбор -->
-    <section class="relative flex flex-col bg-[#FCF4E0] items-center text-center px-8 py-32">
+    <section class="relative flex flex-col bg-[#FCF4E0] items-center text-center px-8 py-16">
     
       <!-- Заголовок -->
-      <h2 id="contact-form" class="text-4xl font-semibold max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
+      <h2 id="contact-form" class="text-4xl font-semibold max-w-[400px] md:max-w-[720px] text-[#0E3246] w-full mb-4 text-center">
         Начните свое путешествие
       </h2>
     
@@ -226,7 +338,7 @@
         <p class="text-xl text-[#0E3246] w-full font-normal mt-4 mb-8 text-center">Оставьте свои данные и оплатите услугу,
           мы свяжемся с вами.</p>
       </div>
-      
+    
       <!-- Форма -->
       <div class="max-w-[540px] z-10 mx-auto w-full">
         <form id="contactForm">
@@ -236,52 +348,67 @@
             <input type="text" id="name" name="name" required
               class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
           </div>
-      
+    
           <!-- Контакт (Телефон или email) -->
           <div class="mb-4">
             <label for="contact" class="block text-sm font-medium text-gray-700 text-left ml-4">Телефон или email</label>
             <input type="text" id="contact" name="contact" required
               class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <small class="text-gray-500 italic block w-full text-left ml-4">Удобный для вас способ: whatsapp, telegram, email, звонок по телефону</small>
           </div>
-      
+    
           <!-- Сообщение -->
           <div class="mb-4">
             <label for="message" class="block text-sm font-medium text-gray-700 text-left ml-4">Ваши пожелания</label>
             <textarea id="message" name="message" rows="3" required
               class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            <small class="text-gray-500 italic block w-full text-left ml-4">Кол-во человек, какие нравятся курорты, бюджет и все, что сочтете нужным</small>
           </div>
-      
+
+          <!-- Стоимость услуги -->
+          <div class="text-lg w-full">
+            <p class="text-md text-[#0E3246] w-full font-normal mt-4 mb-8 ml-4 text-left">
+              <span class="font-semibold">
+                Стоимость услуги подбора: 5 000 рублей
+              </span>
+             </p>
+          </div>
+
           <!-- Кнопка отправки -->
           <div class="flex justify-center">
             <button type="submit"
-              class="px-6 py-3 bg-[#FF6A6E] shadow-sm text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              class="px-6 py-3 shadow-sm font-semibold bg-[#FF6A6E] text-white rounded-md hover:bg-[#FF4A4D] focus:outline-none focus:ring-[#FF6A6E] focus:ring-opacity-50 active:bg-[#FF3D41]">
               Оплатить услугу
             </button>
           </div>
         </form>
-      
+        
+        <div class="text-sm text-gray-600 px-8 md:px-28 w-full text-center">
+          Нажимая на кнопку, вы соглашаетесь с <a href="/policy.html" target="_blank" class="text-blue-500 hover:underline">Политикой обработки персональных данных</a>.
+        </div>
+
         <!-- Скрипт для отправки данных -->
         <script>
           document.getElementById("contactForm").addEventListener("submit", function (event) {
-              event.preventDefault();  // Отменяем стандартное поведение формы
-        
-              alert("Форма отправляется..."); // Проверка, вызывается ли обработчик
+            event.preventDefault();  // Отменяем стандартное поведение формы
 
-              // Собираем данные из формы
-              var formData = {
-                name: document.getElementById("name").value,
-                contact: document.getElementById("contact").value,
-                message: document.getElementById("message").value
-              };
-        
-              // Отправка данных в Google Apps Script
-              fetch("https://script.google.com/macros/s/AKfycbyxJavkLH16nKHnFzMuhTaX76ZrPjdq8RevRKj9IuSiBg3HurQlx9CxabP732z8SSIXvA/exec", {
-                redirect: "follow",
-                method: "POST",
-                body: JSON.stringify(formData),  // Отправляем данные как JSON
-                headers: { "Content-Type": "text/plain;charset=utf-8" }, // Устанавливаем заголовок
-                // mode: "no-cors"  // Для тестирования, если нужно
-              })
+            alert("Форма отправляется..."); // Проверка, вызывается ли обработчик
+
+            // Собираем данные из формы
+            var formData = {
+              name: document.getElementById("name").value,
+              contact: document.getElementById("contact").value,
+              message: document.getElementById("message").value
+            };
+
+            // Отправка данных в Google Apps Script
+            fetch("https://script.google.com/macros/s/AKfycbyxJavkLH16nKHnFzMuhTaX76ZrPjdq8RevRKj9IuSiBg3HurQlx9CxabP732z8SSIXvA/exec", {
+              redirect: "follow",
+              method: "POST",
+              body: JSON.stringify(formData),  // Отправляем данные как JSON
+              headers: { "Content-Type": "text/plain;charset=utf-8" }, // Устанавливаем заголовок
+              // mode: "no-cors"  // Для тестирования, если нужно
+            })
               .then(() => {
                 alert("Заявка отправлена! (проверь таблицу)");
               })
@@ -295,11 +422,11 @@
     
       <!-- Дополнительные изображения -->
       <img src="images/img_art_bus.png"
-        class="absolute left-[50%] top-[3%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
+        class="absolute left-[50%] top-[-2%] transform -translate-x-1/2 -translate-y-1/2 w-52 md:w-52" alt="Изображение 6">
       <img src="images/img_art_palmdouble.png"
-        class="absolute left-[10%] bottom-[-32%] transform -translate-x-1/2 -translate-y-1/2 w-64" alt="Изображение 6">
+        class="absolute left-[8%] bottom-[-13%] md:left-[10%] md:bottom-[-32%] transform -translate-x-1/2 -translate-y-1/2 w-28 md:w-64" alt="Изображение 6">
       <img src="images/img_art_camera2.png"
-        class="absolute right-[-50%] md:right-[-5%] bottom-[-15%] md:bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2 w-56 md:w-64"
+        class="absolute right-[-30%] md:right-[-5%] bottom-[-10%] md:bottom-[-18%] transform -translate-x-1/2 -translate-y-1/2 w-40 md:w-64"
         alt="Изображение 6">
     </section>
       
